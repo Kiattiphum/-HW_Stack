@@ -46,9 +46,14 @@ int isEmpty(STACK *s){
 }
 
 void clear(STACK *s){
-  while (s->size > 0){
-    pop_s(s);
+  char c;
+  if(!isEmpty(s)){
+    while (s->size > 0){
+      c = pop_s(s);
+      printf("popping %c\n", c);
+    }
   }
+  
 }
 /*
 void push(NodePtr *top, int x){
